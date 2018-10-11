@@ -160,7 +160,10 @@
 					<i class="fa fa-phone"></i> <strong> +36 30 499 1461</strong></br>
 					<div style="height:10px"> </div> 
 					<i class="fab fa-skype"></i>	<strong>Borshee </strong></br>
-					<div style="height:10px"> </div> 
+                    <div style="height:10px"> </div> 
+                    <span class="skype-button rounded" data-contact-id="Borshee" data-text="chat"></span>
+                    <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+                    <div style="height:10px"> </div> 
 					<i class="fa fa-envelope"></i><strong>	mosoly@YourElegantMessage.com </strong></br>
 					<div style="height:10px"> </div> 
 				
@@ -215,12 +218,11 @@
         });
     });
 
-	//header slider gyorsítása 
     var cbpAnimatedHeader = (function() {
         var docElem = document.documentElement,
                 header = document.querySelector( '.navbar-default' ),
                 didScroll = false,
-                changeHeaderOn = 1200; //header slider gyorsítása 
+                changeHeaderOn = 200; //menüsor háttere görgetésénél 
         function init() {
             window.addEventListener( 'scroll', function( event ) {
                 if( !didScroll ) {
@@ -259,7 +261,13 @@ $(document).ready(function(){
     });
 });
 </script>
-
+<script>
+    function changeSkypeLogoSrc() {
+        var imgTags = document.getElementById("SkypeButton_Call_Borshee_1_paraElement").getElementsByTagName("img");
+        imgTags[0].src = "https://secure.skypeassets.com/i/scom/images/skype-buttons/chatbutton_16px.png";
+    }
+    setTimeout("changeSkypeLogoSrc()", 2000);
+</script>
 </body>
 
 </html>
